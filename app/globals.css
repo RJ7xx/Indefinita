@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* Updated font variables to use Inter and custom Perfecto Calligraphy font */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-perfecto: var(--font-perfecto-calligraphy);
+}
+
+/* Hide scrollbar while maintaining scroll functionality */
+.scrollbar-hide {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  -webkit-scrollbar: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Adding custom thin semi-transparent scrollbar */
+.custom-scrollbar {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  -webkit-scrollbar-width: 0.75px;
+  -webkit-scrollbar-track: transparent;
+  -webkit-scrollbar-thumb: rgba(255, 255, 255, 0.3);
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.75px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.375px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
